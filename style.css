@@ -1,0 +1,175 @@
+@charset 'utf-8';
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body, 
+main, 
+section, 
+div.carousel, 
+div.items,
+div.actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+body {
+	background-color: rgb(20, 20, 20);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(5px);
+	transition: background .5s ease-in-out;
+	background-image: url('images/item1.webp');
+
+}
+
+main, 
+section, 
+div.carousel-container,
+div.carousel {
+	width: 100%;
+	height: 100%;
+}
+
+section div.carousel-container,
+div.carousel {
+	position: relative;
+}
+
+div.carousel {
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	transition: transform .3s ease-in-out;
+}
+
+div.carousel div.items {
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: 280px;
+	transform: translateY(-50%) scale(0.7) rotateY(20deg);
+	z-index: -1;
+	aspect-ratio: 1 / 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px 1px rgba(30, 30, 30);
+	transition: transform 0.5s ease, z-index 0.5s ease;
+}
+
+div.items div.title {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	padding: 20px;
+	width: 100%;
+	color: lightgray;
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+}
+
+div.title h1 {
+	font-size: 0.9em;
+	word-break: break-word;
+	width: 100%;
+	max-width: 90%;
+}
+
+div.title i {
+	font-size: 1.3em;
+	margin-right: 8px;
+	animation: spin 1.5s linear infinite;
+}
+
+#item0 {
+    background-image: url('images/item0.webp');
+}
+
+#item1 {
+	background-image: url('images/item1.webp');
+}
+
+#item2 {
+    background-image: url('images/item2.webp');
+}
+
+#item3 {
+    background-image: url('images/item3.webp');
+}
+
+#item4 {
+	background-image: url('images/item4.webp');
+}
+
+div.carousel-container div.actions {
+	flex-direction: row;
+	justify-content: space-evenly;
+	position: absolute;
+	top: calc(50% + 100px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 280px;
+	transition: opacity .3s ease-in-out;
+}
+
+div.actions button {
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	color: lightgray;
+	text-align: center;
+	font-size: 2.5em;
+	border: none;
+	text-shadow: 0px 0px 3px lightgray;
+}
+
+.items.prev {
+	transform: translate(calc(-100% - 50px), -50%) scale(0.7) rotateY(-10deg) !important;
+    z-index: 0 !important;
+}
+
+.items.active {
+	transform: translate(-50%, -50%) scale(1) !important;
+	z-index: 2 !important;
+}
+
+.items.active > div.title {
+	opacity: 1;
+}
+
+.items.next {
+	transform: translate(calc(0% + 50px), -50%) scale(0.7) rotateY(10deg) !important;
+	z-index: 0 !important;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	
+	50% {
+		transform: rotateZ(180deg);
+	}
+	
+	100% {
+		transform: rotateZ(360deg);
+	}
+}

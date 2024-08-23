@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preload" href="images/item0.jpeg" as="image">
+	<link rel="preload" href="images/item1.jpeg" as="image">
+	<link rel="preload" href="images/item2.webp" as="image">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	<title>Player99</title>
+</head>
+<body>
+	<main>
+		<section>
+			<div class="carousel-container">
+				<div class="carousel">
+					<div class="items prev" id="item0">
+						<div class="title">
+							<i class="bi bi-vinyl"></i>
+													<h1>Calum Scott - Dancing on my own</h1>
+
+						</div>
+						<audio src="https://dl.dropboxusercontent.com/s/zucyo53x7k0ud2iw3pdqr/Calum-Scott-Dancing-On-My-Own.mp3?rlkey=el8rz2t1zny0krkako5lb79ze&dl=0" loop preload="metadata"></audio>
+					</div>
+					<div class="items active" id="item1">
+						<div class="title">
+							<i class="bi bi-vinyl"></i>
+													<h1>Michelle Ray - Apologize</h1>
+
+						</div>
+						<audio src="https://dl.dropboxusercontent.com/s/8f6zse2z6ap0vu3bpdc6a/Apologize-Michelle-Ray.mp3?rlkey=95aj0aoc7lbz3w2ihvqo3z5fj&dl=0" loop preload="metadata"></audio>
+					</div>
+					<div class="items next" id="item2">
+						<div class="title">
+							<i class="bi bi-vinyl"></i>
+													<h1>Tate McRae - You broke me first</h1>
+
+						</div>
+						
+						<audio src="https://dl.dropboxusercontent.com/s/h1t31ipvk0kvi4ui14z84/Tate-McRae-you-broke-me-first.mp3?rlkey=xawag0u8qmgu92pownmnwkdvf&dl=0" preload="metadata"></audio>
+					</div>
+					<div class="items" id="item3">
+						<div class="title">
+							<i class="bi bi-vinyl"></i>
+													<h1>Simon Erics - Bad Liar</h1>
+						</div>
+						
+						<audio src="https://dl.dropboxusercontent.com/s/3vnbhgeakj1s9v10zl3qi/Simon-Erics-Bad-Liar.mp3?rlkey=myt9ceupggdnuill16x3py6wr&dl=0" preload="metadata"></audio>
+					</div>
+					<div class="items" id="item4">
+						<div class="title">
+							<i class="bi bi-vinyl"></i>
+													<h1>Miley Cyrus - Angels like you</h1>
+						</div>
+						
+						<audio src="https://dl.dropboxusercontent.com/s/bdaq9jdprc06x002fwedt/Miley-Cyrus-Angels-Like-You.mp3?rlkey=187bg5gxi8ggfpe9qr78ocoyj&dl=0" preload="metadata"></audio>
+					</div>
+				</div>
+				<canvas></canvas>
+				<div class="actions">
+					<button id="prev">&#8249;</button>
+					<button id="play">
+						<i class="bi bi-play-circle-fill"></i>
+					</button>
+					<button id="next">&#8250;</button>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</html>
